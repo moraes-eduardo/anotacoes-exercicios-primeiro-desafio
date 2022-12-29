@@ -1,0 +1,158 @@
+# Introdução ao Git e ao GitHub
+
+Comandos básicos para Terminal no Windows	
+cd /							| vai para base da unidade
+cd windows						| acessa pasta windows
+cd ..							| sai da pasta ou volta um nível
+mv bolo.md ./receitas/				| move arquivo para uma outra pasta
+pwd							| mostra o caminho completo da pasta
+dir ou ls(git)					| listar as pastas do local que está situado
+ls -a							| listar as pastas e arquivos ocultos
+mkdir	workspace					| cria a pasta "workspace"
+del workspace					| deleta os arquivos da pasta "workspace"
+rmdir workspace /S /Q				| deleta pasta com arquivos 
+cls ou clear(git)	ou ctrl+l(git)		| limpar a tela
+echo hello > hello.txt				| cria arquivo com nome e conteúdo "hello"
+git --version					| versão do Git
+openssl sha1 texto.txt				| visualizar 40 dígitos do arquivo
+echo 'conteudo' | git hash-object --stdin	| visualizar 40 dígitos da string
+echo -e 'blob 9\0conteudo' | openssl sha1	| visualizar 40 dígitos da string modificada
+git init						| iniciar um repositório
+
+
+
+
+Instalação do Git
+	https://git-scm.com/download/win
+
+Tópicos fundamentais
+	SHA1 (Secure Hash Algorithm)
+		Algoritmo que pega seu arquivo e embaralhar ele de forma especifica
+		Gera conjunto de characteres de 40 dígitos
+		Eficiente para identificar de forma rápida e segura o arquivo
+		Comando: openssl sha1 texto.txt
+Objetos internos e fundamentais que aumentam a segurança do Git
+	BLOB (bolha)
+		Objeto que contém metadados do Git
+		Comando: echo 'conteudo' | git hash-object --stdin
+		Comando: echo -e 'blob 9\0conteudo' | openssl sha1
+	TREE (árvore)
+		Objeto recursivo que armazena blobs e 
+		aponta para blobs e/ou outras árvores
+		Também contém metadados
+		Guarda o nome do arquivo
+		Monta toda estrutura dos arquivos
+		Tem sha1 dos metadados
+	COMMIT
+		Objeto que junta tudo (mais importante)
+		aponta para arvore
+		aponta para parente
+		aponta para autor
+		aponta para mensagem
+		possui sha1
+	Sistema distribuído Seguro
+		Muito difícil perder o arquivo
+Chave SSH
+	Comando: ssh-keygen -t ed25519 -C "moraes-eduardo@hotmail.com"    | criar chave para GitHub
+	Comando: cd /c/Users/morae/.ssh
+	Comando: cat id_ed25519.pub        | pegar a chave para o GitHub
+       Copia no gitHub a Chave: ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHJTmssdWYF3BagOMUo21UYKMq/NXSCHCD5w/tSmPVE4 moraes-eduardo@hotmail.com
+	Comando: eval $(ssh-agent -s)
+	Comando: ssh-add id_ed25519
+	Comando: git clone "chave ssh"
+Token
+	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
+
+Iniciar GIT
+	Na pasta do repositório
+		Comando: git init
+		Comando: git config --global user.email "moraes-eduardo@hotmail.com"
+		Comando: git config --global user.name Perkles
+		Comando: git add *
+Iniciar o versionamento
+
+Criar um commit
+	Comando: git commit -m "commit inicial"
+
+
+Passo a passo do ciclo de vida do arquivo
+Comando: git init			| Git inicializa um repositório dentro de uma pasta
+Cria arquivo no repositório	| Arquivo vai para Untracked
+Comando: git add *		| Git move o arquivo criado de Untracked para Staged
+Edita arquivo do repositório	| Git move arquivo de Staged para Modified
+Comando: git add *		| Git move o arquivo de Modified para Staged
+Remove arquivo do repositório	| Arquivo vai para Untracked
+
+Ciclo de vida na prática
+Alteração do repositório
+	Cria um arquivo
+	Comando: echo > README.md
+	Edita arquivo colocando dados
+		Observar situação atual do repositório
+		Comando: git status
+Mover todas ajustes para Staged
+	Comando: git add *
+		Observar situação atual do repositório
+		Comando: git status
+Mover ajustes para Unmodified	
+	Comando: git commit -m "cria arquivo readme, e edição do mesmo"
+
+Repositórios
+	Ambiente de desenvolvimento
+		Working directory
+		Staging area
+		Local repository - precisa estar em commit
+	Servidor
+		Remote Repository
+
+Estágios do Repositório
+	Untracked - nessa situação o Git não tem ciência do arquivo
+	Tracked - nessa situação o Git tem ciência do arquivo
+		Unmodified - arquivo não foi modificado
+		Modified - arquivo foi modificado
+		Staged - arquivo se preparando para fazer parte de um Commit
+		Commit - arquivo vai para Unmodified		
+
+
+GitHub (Repositório remoto)
+Como saber as configurações definidas local e remoto
+	Comando: git config --list
+Remover definições de email e nome do usuário
+	Comando: git config --global --unset user.email
+	Comando: git config --global --unset user.name
+Definir email e nome do usuário
+	Comando: git config --global user.email "moraes-eduardo@hotmail.com"
+	Comando: git config --global user.name moraes-eduardo
+Criar um repositório no github
+
+Comandos:
+echo "# dimensionamento-solar" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/moraes-eduardo/dimensionamento-solar.git
+git remote -v
+git push -u origin main           | Empurrar para remoto
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,38 @@
+# Git e GitHub
+Instalar o Git (Git Bash) e criar perfil no GitHub
+
+Criar novo repositório no GitHub
+	https://github.com/new
+		nome do repositório
+		descrição do repositório
+		publico ou privado
+		adicionar README file
+		create repository
+Editar README do GitHub
+	Icone de editar arquivo  
+	Criar um Link
+		[Sintaxe Basica Markdown](https://www.markdownguide.org/basic-syntax/)
+	Salvar alterações
+		Commit changes
+Clonar o repositório para máquina
+	Code
+	cópia endereço do HTTPS
+	windows explorer cria uma pasta
+		Abre git bash na pasta
+			Comando: git clone "endereço do HTTPS"
+Edição dos arquivos e pastas na máquina
+	Criar e editar novos arquivos, cria pasta, etc	
+Atualizar ajustes feitos na máquina para o GitHub
+	adiciona os ajustes no controle de versão local
+		Comando: git add .
+	faz o commit
+		Comando: git commit -m "Inclusão das anotações do curso de Git/GitHub"
+	envia arquivos para github
+		Comando: git push origin main
+
+
+
+
+
+
+

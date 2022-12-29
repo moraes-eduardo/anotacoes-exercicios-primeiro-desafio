@@ -1,0 +1,84 @@
+# Programação e pensamento computacional
+Pensamento computacional
+	expressão de soluções em passos computacionais
+	sistemático e eficiente
+	habilidade generalista (matemática, leitura, escrita)
+	4 pilares
+		decomposição (dividir o problemas em subproblemas)
+		reconhecimento padrões (padrões, diferenças
+		Abstração (do especifico para generalista)
+			(automatização - define o passo a passo)
+		Algoritmo
+			entrada e saída
+
+Habilidades complementares
+	Racicionio lógico - pensamento estruturado
+		Inferencia - sintética
+			Indução - fenomeno observado		
+			Abdução - premissa (investigativo
+		Inferência - analítica
+			Dedução - leis e teorias (exatas)
+	Aperfeiçoamento
+		encontrar solução eficiente
+		Otimizar processos
+		simplificar linha código
+		funções bem definidas
+
+4 pilares
+1 - Decomposição
+	análise - quebrar processo em partes menores
+	síntese - combinar elementos
+	ordem
+	Exemplo: cozinhar
+		Identificar os ingredientes
+		Determinar as etapas (sequencia ou paralelo)
+		Executar cada etapa
+		Agregar os ingredientes para finalizar
+	Exemplo: fucionamento de uma bike
+		Identificar os componentes
+		papel de cada componente
+		interdependência das peças
+	Exemplo: criar um aplicativo
+		Finalidade
+		Interface
+		Funcionalidades
+		Pré-requisitos
+
+2 - Reconhecimento de Padrões
+	Modelo base
+	Estrutura invariante
+	Repetição
+	Exemplo: cadeira, fotos redes sociais, compressão dados
+			frutas, doces
+	Consegue generalizar resolução problemas diferentes
+		classes, categorias
+	reconhecer padrão - por comparação
+
+3 - Abstração
+	Processo intelectual de isolamento de um objeto da realidade
+	Tornar mais amplo, extensão, reutilizável
+	Ex: Dados de um estudante
+
+4 - Algoritmos
+	Programas - Instruções detalhadas
+	Passo a passo ou "step by step"
+	Entendido por humano e pela máquina
+	Definição:	
+		Sequencia de passos com objetivo definido
+		Execução de tarefas especificas
+		Conjunto de operações que resultam em uma sucessão finita de ações
+	Construção	
+		Narrativa - descrição 
+		fluxograma - simbolos 
+		pseudocodigo - portugol
+
+Caso conceitual: Perdido
+	sobrevivencia: agua, comida e abrigo
+	como fazer a comida (peixe) : algoritmo
+
+
+Caso aplicado: soma de um intervalo
+	incrementar e decrementar
+
+Caso aplicado: advinhe o número
+	Busca binária
